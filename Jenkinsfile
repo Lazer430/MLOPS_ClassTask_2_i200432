@@ -27,6 +27,16 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying'
+                script {
+                    def branch = "${env.BRANCH_NAME}"
+
+                    if (branch =='main'){
+                        println("Deploying to main")
+                    }
+                    else {
+                        println("Deploying to dev")
+                    }
+                }
             }
         }
     }
