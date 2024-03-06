@@ -10,3 +10,4 @@ Note for Jenkins on WSL:
 2) Install python3.10-venv from apt
 3) Make sure that all python scripts use venv sytax (python -m pytest.py)
 4) Enjoy!
+done
