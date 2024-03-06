@@ -6,10 +6,27 @@ pipeline {
             steps {
                 echo 'Checking out to main branch'
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lazer430/MLOPS_ClassTask_2_i200432.git']])
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Building'
                 withPythonEnv('python') {
                     sh 'make install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+                withPythonEnv('python') {
                     sh 'make test'
                 }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
             }
         }
     }
