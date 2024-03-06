@@ -30,7 +30,7 @@ pipeline {
                 script {
                     def branch = "${env.BRANCH_NAME}"
 
-                    if (branch =='main'){
+                    if (branch == "main"){
                         println("Deploying to main")
                     }
                     else {
