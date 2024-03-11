@@ -31,7 +31,7 @@ pipeline {
                     def branch = "${env.GIT_BRANCH}"
                     println("Current Branch is:"+ branch)
                     
-                    if (branch == "main"){
+                    if (branch == "origin/main"){
                         println("Deploying to main")
                     }
                     else {
