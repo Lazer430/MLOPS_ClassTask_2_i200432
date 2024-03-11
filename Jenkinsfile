@@ -29,7 +29,8 @@ pipeline {
                 echo 'Deploying'
                 script {
                     def branch = "${env.BRANCH_NAME}"
-
+                    println("Current Branch is:"+ branch)
+                    
                     if (branch == "main"){
                         println("Deploying to main")
                     }
