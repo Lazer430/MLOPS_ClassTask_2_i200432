@@ -12,5 +12,4 @@ Note for Jenkins on WSL:
 4) Enjoy!
 done
 done
-
-testing pipeline
+Note: use ${env.GIT_BRANCH} instead of ${env.BRANCH_NAME}
