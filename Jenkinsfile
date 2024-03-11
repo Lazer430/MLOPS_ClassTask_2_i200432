@@ -28,7 +28,7 @@ pipeline {
             steps {
                 echo 'Deploying'
                 script {
-                    def branch = "${env.BRANCH_NAME}"
+                    def branch = "main"
                     println("Current Branch is:"+ branch)
                     
                     if (branch == "main"){
